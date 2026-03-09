@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    
+</head>
+<nav><a href="/Portal_Page/index.html">Home</a></li></nav>
+<body>
+    <h1>About Me</h1>
+    <main>
+        My name is Connor Sturgeon. I'm from New Albany, Indiana and moved to Rexburg, Idaho to attend BYU - Idaho.
+        I'm currently studying for a Cyber Security major and this is currently my second semester.
+        I have two cats, and my favorite pastimes are photography, playing video games, and watching movies.
+        <a href="/cats/index.html">Cats</a>
+        <a href="/fav_video_games/index.html">Favorite Video Games</a>
+        <a href="/fav_movies/index.html">Favorite Movies</a>
+    </main>
+    <script>
+    const sections = document.querySelectorAll('.game-section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+</body>
+</html>

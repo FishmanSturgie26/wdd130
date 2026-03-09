@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background: rgb(120, 96, 64);
+        }
+
+        #formContainer {
+            border: 10px solid blue;
+            border-radius: 5%;
+            height: 600px;
+            width: 400px;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            background-color: white;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            margin: 8px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+        margin: 8px;
+        }
+
+        #imagebox {
+            background-image: url(images/jesus_feeds_5000.jpeg);
+            background-size: 400px;
+            height: 160px;
+            
+        }
+
+        #myForm {
+            background: white;
+        }
+
+        #username1 {
+            display: inline-block;
+            margin-right: 120px;
+            margin-left: 4px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        #password1 {
+            display: inline-block;
+            margin-right: 131px;
+            margin-left: 4px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        #email1 {
+            display: inline-block;
+            margin-right: 154px;
+            margin-left: 4px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        #gender {
+            display: inline-block;
+            margin-right: 143px;
+            margin-left: 4px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        #gender1 {
+            display: inline-block;
+        }
+
+        #checkbox {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #checkbox1 {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #button {
+            text-align: center;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <div id="imagebox">
+            <button type="button" id="closeBtn">X</button>
+            <h1>Daily Feed</h1>
+            <h2>Scripture a Day</h2>
+        </div>
+        <form id="myForm">
+            <h3>Sign Up for Daily Scripture Feed</h3>
+            <div id="username1">
+                <label for="username">User Name:</label>
+            </div>
+            <input type="text" id="username" name="username" required>
+
+            <div id="password1">
+                <label for="password">Password:</label>
+            </div>
+            <input type="password" id="password" name="password" required>
+
+            <div id="email1">
+                <label for="email">Email:</label>
+            </div>
+            <input type="email" id="email" name="email" required>
+
+            <div id="gender">
+                <label>Gender:</label>
+            </div>
+
+            <div id="gender1">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <section>
+                <div id="checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </div>
+            </section>
+
+            <section>
+                <div id="checkbox1">
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </div>
+            </section>
+
+            <section>
+                <div id="button">
+                    <button type="submit">Submit</button>
+                </div>
+            </section>
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>

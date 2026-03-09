@@ -1,0 +1,29 @@
+
+
+img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-width: 10px;
+    border-color: pink;
+    border-style: ridge;
+}
+
+body {
+    background-image: url(../images/hearts.png);
+    background-size: cover;
+    background-position: center;
+    color: blueviolet;
+    background-color: pink;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+}
+
+text {
+    color: blueviolet;
+    background-size: auto;
+    background-color: pink;
+}

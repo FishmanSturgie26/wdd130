@@ -1,0 +1,121 @@
+div {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+@font-face {
+    font-family: Metal_Lord;
+    src: url(../fonts/Metal_Lord.otf);
+}
+
+body {
+    background: rgb(206, 206, 206);
+
+}
+
+#wrapper {
+    border: 3px solid #d1903b;
+    width: 1024px;
+    margin: 40px auto;
+}
+
+header img {
+    display: inline-block;
+}
+
+h1 {
+    font-family: Metal_Lord;
+    font-size: 2.5em;
+    margin :auto;
+    background-color: rgb(206, 206, 206);
+    display: inline-block;
+}
+
+nav a{
+    background: white;
+    height: 50px;
+    text-decoration: none;
+}
+
+nav:hover {
+    color: rgb(112, 167, 215);
+}
+
+.home-title {
+    color: azure;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: square;
+}
+
+.img1 {
+    text-align: left;
+    border: 2px solid #d1903b;
+    width: 300px;
+}
+
+.img2 {
+    text-align: left;
+    border: solid #d1903b;
+    width: 300px;
+}
+
+.img3 {
+    text-align: left;
+    border: solid #d1903b;
+    width: 300px;
+}
+
+main section {
+    text-align: center;
+}
+
+#hero-msg h1, #hero-msg h4 {
+    text-align: center;
+}
+
+.button-box {
+    text-align: center;
+}
+
+.book .join {
+    background-color: aliceblue;
+    text-decoration: none;
+}
+
+.book:hover .join:hover {
+    background-color: aliceblue;
+}
+
+.msg {
+    background-color: aliceblue;
+}
+
+footer p {
+    background-color: aliceblue;
+    font-size: 1.2em;
+}
+
+h4 {
+    color: #d1903b;
+}
+
+footer a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: rgb(105, 146, 181);
+}
+
+.msg p {
+    color: #d1903b;
+}
+
