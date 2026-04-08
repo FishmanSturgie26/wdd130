@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cats</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header>
+        <h1>Sturgeon's Cats</h1>
+        <nav>
+            <a href="/about_me/index.html">About Me</a>
+            <a href="index.html">Photography</a>
+            <a href="/cats/index.html">Cats</a>
+            <a href="/fav_video_games/index.html">Video Games</a>
+            <a href="/fav_movies/index.html">Movies</a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <h2>My Cats</h2>
+
+        <!-- Cat One -->
+        <section class="game-section">
+            <div class="game-top">
+                <img src="images/sadie.jpg" alt="Sadie">
+                <div class="game-meta">
+                    <h3>Sadie</h3>
+                    <span class="year">Adopted: 2014</span>
+                </div>
+            </div>
+            <p>
+                Grumpy old cat, but I love her. She can the most affectionate cat, but also causes the most chaos.
+            </p>
+        </section>
+
+        <!-- Cat Two -->
+        <section class="game-section">
+            <div class="game-top">
+                <img src="images/elsie.jpg" alt="Elsie">
+                <div class="game-meta">
+                    <h3>Elsie</h3>
+                    <span class="year">Adopted: 2023</span>
+                </div>
+            </div>
+            <p>
+                She's a perfect, angel, baby.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Sturgeon</p>
+    </footer>
+
+</div>
+
+<!-- Scroll Animation Script -->
+<script>
+    const sections = document.querySelectorAll('.game-section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>

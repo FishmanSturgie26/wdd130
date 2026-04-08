@@ -1,0 +1,140 @@
+/* Photography Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Photo Card */
+.photo-card {
+    background: #e6faff;
+    border: 2px solid #4f7cff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.photo-card h3 {
+    color: #000;
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(#c9f2ff, #f5fcff);
+    color: #0047ff;
+}
+
+/* Wrapper */
+#wrapper {
+    width: 85%;
+    margin: auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+header h1 {
+    background: white;
+    padding: 10px 20px;
+    border: 2px solid #4f7cff;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0047ff;
+    font-weight: bold;
+}
+
+/* Main */
+main {
+    margin-top: 60px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+/* Game Section */
+.game-section {
+    background: #e6faff;
+    border: 2px solid #4f7cff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Image + Title */
+.game-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.game-top img {
+    width: 220px;
+    border-radius: 8px;
+}
+
+/* Meta */
+.game-meta h3 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.year {
+    display: inline-block;
+    background: white;
+    padding: 6px 12px;
+    border: 1px solid #4f7cff;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Description */
+.game-section p {
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    padding: 20px 0;
+    color: #333;
+}
